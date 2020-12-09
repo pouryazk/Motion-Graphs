@@ -20,7 +20,7 @@ def _motion_front(_x, _t):
 def motion(_x):
     _t = linspace(0, 2*_x, 2000)
     y = append(
-        _motion_back(_x, _t[:500]), _motion_back(_x, _t[500:])
+        _motion_back(_x, _t[:500]), _motion_front(_x, _t[500:])
     )
     return _t, y
 
