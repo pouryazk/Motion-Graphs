@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pylab as plt
 from numpy import pi, exp, real, imag, linspace, sin, cos, array
 
 x = [0.01, 0.1, 1.0]
@@ -33,6 +33,10 @@ plt.grid(alpha=.4, linestyle='--')
 # Add a Legend
 plt.legend()
 
+
+# save plt
+fig = plt.gcf()
+# fig.set_size_inches(40, 30)
+fig.savefig('foo.emf', dpi=100)
 # Show the plot
 plt.show()
-
