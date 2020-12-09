@@ -1,5 +1,5 @@
 import matplotlib.pylab as plt
-from numpy import pi, exp, real, imag, linspace, sin, cos, array
+from numpy import pi, exp, linspace, sin, cos
 
 x = [0.01, 0.1, 1.0]
 
@@ -29,14 +29,15 @@ plt.ylabel('u/u_st')
 
 # Add a grid
 plt.grid(alpha=.4, linestyle='--')
-
 # Add a Legend
 plt.legend()
 
 
 # save plt
 fig = plt.gcf()
-# fig.set_size_inches(40, 30)
-fig.savefig('foo.emf', dpi=100)
+fig_size = fig.get_size_inches()
+fig.set_size_inches(fig_size[0]*2, fig_size[1]*2)
+fig.savefig('Problem-1.jpg', dpi=100)
+
 # Show the plot
 plt.show()
